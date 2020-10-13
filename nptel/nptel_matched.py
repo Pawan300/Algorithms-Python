@@ -1,0 +1,20 @@
+def matched(str):
+    start=0
+    end=0
+    i=0
+    a=False
+    b=True
+    while(i<len(str)):
+        if(start>=end):
+            if(str[i]=="("):
+                start=start+1
+            elif(str[i]==")"):  
+                end=end+1
+        else:
+            break
+        i=i+1
+    if(start==end):
+        print(b)
+    else:
+        print(a)
+matched("a)*(?")
